@@ -83,6 +83,7 @@ I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the 
 	edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 	
 #Here are a couple examples for the result:
+
 ![alt text][image1] ![alt text][image2]
 
 ##Step 4 - region of interest
