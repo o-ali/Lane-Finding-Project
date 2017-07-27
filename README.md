@@ -13,11 +13,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "Canny1"
-[image2]: ./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "Canny2"
+[image1]:(./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "Canny1")
+[image2]:(./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "Canny2")
 
-[image3]: ./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1"
-[image4]: ./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2"
+[image3]:(./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1")
+[image4]:(./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2")
 
 [image5]: ./Images/HSLMask/mask_white_solidYellowCurve.jpg "HSL1"
 [image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "HSL2"
@@ -187,7 +187,7 @@ def draw_lane_lines(image, lines, color=[255, 0, 0], thickness=20):
     for line in lines:
         if line is not None:
             cv2.line(line_image, *line,  color, thickness)
-    # image1 * a + image2 * ß + ?
+    # image1 * a + image2 * ÃŸ + ?
     # image1 and image2 must be the same shape.
     return cv2.addWeighted(image, 1.0, line_image, 0.95, 0.0)
 
