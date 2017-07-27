@@ -41,7 +41,7 @@ The goals / steps of this project are the following:
 
 ### 1. The Pipeline
 
-**Step 1 - Grayscale
+## Step 1 - Grayscale
 
 My pipeline consists of 6 steps, with the first being the conversion to grayscale.
 
@@ -51,7 +51,7 @@ The grayscale image will be combined with the masks and used for the canny edge 
 
 ![alt text][image3] ![alt text][image4]
 
-**Step 2 - HSL Mask
+## Step 2 - HSL Mask
 
 Next is creating the mask to identify the the lanes by color more easily.
 I convert the image to HSL and set the boundaries to isolate white and yellow. HSL allows for easy identification of the colors even in more difficult shaded situations.
@@ -75,7 +75,7 @@ Then a bitwise AND with the grayscale image
 
 ![alt text][image14] ![alt text][image15]
 
-**Step 3 - Canny Edge Detection
+## Step 3 - Canny Edge Detection
 
 The Canny edge detection is done by first passing the output of the previous step through a gaussian blur with value 13
 I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the blurred image with those values.
@@ -103,7 +103,7 @@ total so the region of interest scales with the image size.
 	masked_edges = region_of_interest(edges, vertices)
 
 
-**Step 5 - Hough
+## Step 5 - Hough
 After masking the image with the region of interest it's time to run the Hough transform and get the hough lines. I set the variables and call the 
 cv2.HoughLines function with the 'masked_edges' image
 
@@ -116,7 +116,7 @@ cv2.HoughLines function with the 'masked_edges' image
 
 	lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]),minLineLength=min_line_len,maxLineGap=max_line_gap)
 
-**Step 6 - Extrapolate and Draw Lines
+## Step 6 - Extrapolate and Draw Lines
 
 
 The functions below are used to consolidate and extrapolate the detected hough lines and they are called through the pipeline with
