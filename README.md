@@ -55,13 +55,13 @@ The grayscale image will be combined with the masks and used for the canny edge 
 
 Next is creating the mask to identify the the lanes by color more easily.
 I convert the image to HSL and set the boundaries to isolate white and yellow. HSL allows for easy identification of the colors even in more difficult shaded situations.
-	##White Mask Boundaries:
-	#lower_white = np.array([0,200,0], dtype = "uint8")
-	#upper_white = np.array([255,255,255], dtype = "uint8")
+	#White Mask Boundaries:
+	lower_white = np.array([0,200,0], dtype = "uint8")
+	upper_white = np.array([255,255,255], dtype = "uint8")
 
-	##Yellow Mask Boundaries:
-	#lower_yellow = np.array([10,0,100], dtype = "uint8")
-    	#upper_yellow = np.array([40,200,255], dtype = "uint8")
+	#Yellow Mask Boundaries:
+	lower_yellow = np.array([10,0,100], dtype = "uint8")
+    	upper_yellow = np.array([40,200,255], dtype = "uint8")
 
 	## White Mask
 	![alt text][image5] ![alt text][image7]
@@ -79,7 +79,9 @@ Then a bitwise AND with the grayscale image
 
 The Canny edge detection is done by first passing the output of the previous step through a gaussian blur with value 13
 I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the blurred image with those values.
-	# edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
+
+	edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
+	
 #Here are a couple examples for the result:
 ![alt text][image1] ![alt text][image2]
 
@@ -88,35 +90,38 @@ I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the 
 Next in the pipeline is creating the region of interest and masking out the rest of the image.
 rows and cols are set to the shape sizes of the 'edges' image (result of the Canny function). The rest of the variables are set by being a percent of the
 total so the region of interest scales with the image size.
-	#rows, cols = edges.shape[:2]
-	#bottomLeft = [cols*.1, rows*.97]
-	#topLeft = [cols*.4, rows*.6]
-	#topRight = [cols*.6, rows*.6]
-	#bottomRight = [cols*.9, rows*.97]
 
-	#vertices = np.array([[bottomLeft,topLeft,topRight,bottomRight]], dtype=np.int32)
+	rows, cols = edges.shape[:2]
+	bottomLeft = [cols*.1, rows*.97]
+	topLeft = [cols*.4, rows*.6]
+	topRight = [cols*.6, rows*.6]
+	bottomRight = [cols*.9, rows*.97]
 
-	#masked_edges = region_of_interest(edges, vertices)
+	vertices = np.array([[bottomLeft,topLeft,topRight,bottomRight]], dtype=np.int32)
+
+	masked_edges = region_of_interest(edges, vertices)
 
 
 ##Step 5 - Hough
 After masking the image with the region of interest it's time to run the Hough transform and get the hough lines. I set the variables and call the 
 cv2.HoughLines function with the 'masked_edges' image
 
-	#rho = 1 # distance resolution in pixels of the Hough grid
-	#theta = np.pi/180 # angular resolution in radians of the Hough grid
-	#threshold = 20     # minimum number of votes (intersections in Hough grid cell)
-	#min_line_length = 20 #minimum number of pixels making up a line
-	#max_line_gap = 300   # maximum gap in pixels between connectable line segments
-	#line_image = np.copy(image)*0 # creating a blank to draw lines on
+	rho = 1 # distance resolution in pixels of the Hough grid
+	theta = np.pi/180 # angular resolution in radians of the Hough grid
+	threshold = 20     # minimum number of votes (intersections in Hough grid cell)
+	min_line_length = 20 #minimum number of pixels making up a line
+	max_line_gap = 300   # maximum gap in pixels between connectable line segments
+	line_image = np.copy(image)*0 # creating a blank to draw lines on
 
-	#lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
+	lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
 
 ##Step 6 - Extrapolate and Draw Lines
 
 
 The functions below are used to consolidate and extrapolate the detected hough lines and they are called through the pipeline with
-	#lines_edges = draw_lane_lines(image, lane_lines(image, lines))
+
+	lines_edges = draw_lane_lines(image, lane_lines(image, lines))
+	
 """
 average_slope_intercept calculates the average slope of the lines on the left and the lines on the right to create the best slope for our final line
 """
