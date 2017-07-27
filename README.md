@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image3]: ./Images/Grayscale/GrayScale_solidYellowCurve.jpg "solidYellowCurve.jpg"
 [image4]: ./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
 
-[image5]: ./Images/HSLMask/mask_white_solidYellowCurve.jpg "solidYellowCurve.jpg"
+[image5]: ./Images/HSLMask/mask_white_solidWhiteRight.jpg "solidWhiteRight.jpg"
 [image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
 
 [image7]: ./Images/HSLMask/mask_yellow_solidYellowCurve.jpg "solidYellowCurve.jpg"
