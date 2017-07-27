@@ -114,7 +114,7 @@ cv2.HoughLines function with the 'masked_edges' image
 	max_line_gap = 300   # maximum gap in pixels between connectable line segments
 	line_image = np.copy(image)*0 # creating a blank to draw lines on
 
-	lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
+	lines = cv2.HoughLinesP(img, rho, theta, threshold, np.array([]),minLineLength=min_line_len,maxLineGap=max_line_gap)
 
 ##Step 6 - Extrapolate and Draw Lines
 
@@ -124,7 +124,8 @@ The functions below are used to consolidate and extrapolate the detected hough l
 	lines_edges = draw_lane_lines(image, lane_lines(image, lines))
 	
 	"""
-	average_slope_intercept calculates the average slope of the lines on the left and the lines on the right to create the best slope for our final line
+	average_slope_intercept calculates the average slope of the lines on the left and the lines on the right to create 
+	the best slope for our final line
 	"""
 
 	def average_slope_intercept(lines):
