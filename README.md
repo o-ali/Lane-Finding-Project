@@ -211,7 +211,7 @@ The results are these images:
 
 The pipeline can also be run on videos which can be viewed in the 'VideosOutput' directory.
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with your current pipeline
 
 
 A Potential issue with this pipeline is when a line with the color white or yellow is on the road and is almost vertical, the average slope
@@ -221,7 +221,7 @@ Another shortcoming, related to the above, is in regards to strong angles on the
 incorrectly.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to your pipeline
 
 A possible improvement would be to implement a way to draw the lines shorter so the angle or curve of the lane line doesnt affect the entire line.
 
