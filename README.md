@@ -13,8 +13,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]:(./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "Canny1")
-[image2]:(./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "Canny2")
+[image1]:(/Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg?raw=true "Canny1")
+[image2]:(/Images/CannyEdge/CannyEdges_solidYellowCurve.jpg?raw=true "Canny2")
 
 [image3]:(./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1")
 [image4]:(./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2")
