@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image7]: ./Images/HSLMask/mask_yellow_solidYellowCurve.jpg "HSL3"
 [image8]: ./Images/HSLMask/mask_yellow_solidWhiteCurve.jpg "HSL4"
 
-[image8]: ./Images/FinalResult/solidYellowCurve.jpg "Result1"
+[image16]: ./Images/FinalResult/solidYellowCurve.jpg "Result1"
 [image9]: ./Images/FinalResult/solidWhiteCurve.jpg "Result2"
 [image10]: ./Images/FinalResult/solidWhiteRight.jpg "Result3"
 [image11]: ./Images/FinalResult/solidYellowCurve2.jpg "Result4"
@@ -193,7 +193,7 @@ def draw_lane_lines(image, lines, color=[255, 0, 0], thickness=20):
 
 The results are these images:
 
-![alt text][image8] ![alt text][image9]
+![alt text][image16] ![alt text][image9]
 ![alt text][image10] ![alt text][image11]
 ![alt text][image12] ![alt text][image13]
 
