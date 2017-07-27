@@ -13,27 +13,27 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "Canny1"
-[image2]: ./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "Canny2"
+[image1]: ./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
+[image2]: ./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "solidYellowCurve.jpg"
 
-[image3]: ./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1"
-[image4]: ./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2"
+[image3]: ./Images/Grayscale/GrayScale_solidYellowCurve.jpg "solidYellowCurve.jpg"
+[image4]: ./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
 
-[image5]: ./Images/HSLMask/mask_white_solidYellowCurve.jpg "HSL1"
-[image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "HSL2"
+[image5]: ./Images/HSLMask/mask_white_solidYellowCurve.jpg "solidYellowCurve.jpg"
+[image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
 
-[image7]: ./Images/HSLMask/mask_yellow_solidYellowCurve.jpg "HSL3"
-[image8]: ./Images/HSLMask/mask_yellow_solidYellowCurve2.jpg "HSL4"
+[image7]: ./Images/HSLMask/mask_yellow_solidYellowCurve.jpg "solidYellowCurve.jpg"
+[image8]: ./Images/HSLMask/mask_yellow_solidYellowCurve2.jpg "solidYellowCurve2.jpg"
 
-[image16]: ./Images/FinalResult/solidYellowCurve.jpg "Result1"
-[image9]: ./Images/FinalResult/solidWhiteCurve.jpg "Result2"
-[image10]: ./Images/FinalResult/solidWhiteRight.jpg "Result3"
-[image11]: ./Images/FinalResult/solidYellowCurve2.jpg "Result4"
-[image12]: ./Images/FinalResult/solidYellowLeft.jpg "Result5"
-[image13]: ./Images/FinalResult/whiteCarLaneSwitch.jpg "Result6"
+[image16]: ./Images/FinalResult/solidYellowCurve.jpg "solidYellowCurve.jpg"
+[image9]: ./Images/FinalResult/solidWhiteCurve.jpg "solidWhiteCurve.jpg"
+[image10]: ./Images/FinalResult/solidWhiteRight.jpg "solidWhiteRight.jpg"
+[image11]: ./Images/FinalResult/solidYellowCurve2.jpg "solidYellowCurve2.jpg"
+[image12]: ./Images/FinalResult/solidYellowLeft.jpg "solidYellowLeft.jpg"
+[image13]: ./Images/FinalResult/whiteCarLaneSwitch.jpg "whiteCarLaneSwitch.jpg"
 
-[image14]: ./Images/grayANDhsl/GandHSL_solidYellowLeft.jpg "Gray AND HSL 1"
-[image15]: ./Images/grayANDhsl/GandHSL_solidWhiteCurve.jpg "Gray AND HSL 2"
+[image14]: ./Images/grayANDhsl/GandHSL_solidYellowLeft.jpg "solidYellowLeft"
+[image15]: ./Images/grayANDhsl/GandHSL_solidWhiteCurve.jpg "solidWhiteCurve.jpg"
 
 ---
 
