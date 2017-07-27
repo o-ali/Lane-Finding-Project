@@ -63,10 +63,10 @@ I convert the image to HSL and set the boundaries to isolate white and yellow. H
 	lower_yellow = np.array([10,0,100], dtype = "uint8")
     	upper_yellow = np.array([40,200,255], dtype = "uint8")
 
-	## White Mask
-	![alt text][image5] ![alt text][image7]
-	## Yellow Mask
-	![alt text][image6] ![alt text][image8]
+## White Mask
+![alt text][image5] ![alt text][image7]
+## Yellow Mask
+![alt text][image6] ![alt text][image8]
 
 After obtaining the seperate masks I perform a bitwise OR to combine them into one image
 	#mask = cv2.bitwise_or(mask_white,mask_yellow)
