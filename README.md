@@ -13,11 +13,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]:(/Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg?raw=true "Canny1")
-[image2]:(/Images/CannyEdge/CannyEdges_solidYellowCurve.jpg?raw=true "Canny2")
+[image1]: ./Images/CannyEdge/CannyEdges_solidWhiteCurve.jpg "Canny1"
+[image2]: ./Images/CannyEdge/CannyEdges_solidYellowCurve.jpg "Canny2"
 
-[image3]:(./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1")
-[image4]:(./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2")
+[image3]: ./Images/Grayscale/GrayScale_solidYellowCurve.jpg "GrayScale1"
+[image4]: ./Images/Grayscale/GrayScale_solidWhiteCurve.jpg "GrayScale2"
 
 [image5]: ./Images/HSLMask/mask_white_solidYellowCurve.jpg "HSL1"
 [image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "HSL2"
@@ -49,7 +49,7 @@ The grayscale image will be combined with the masks and used for the canny edge 
 
 #cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-[!alt text][image3] [!alt text][image4]
+![alt text][image3] ![alt text][image4]
 
 ##Step 2 - HSL Mask
 
@@ -64,16 +64,16 @@ I convert the image to HSL and set the boundaries to isolate white and yellow. H
     	#upper_yellow = np.array([40,200,255], dtype = "uint8")
 
 	## White Mask
-	[!alt text][image5] [!alt text][image7]
+	![alt text][image5] ![alt text][image7]
 	## Yellow Mask
-	[!alt text][image6] [!alt text][image8]
+	![alt text][image6] ![alt text][image8]
 
 After obtaining the seperate masks I perform a bitwise OR to combine them into one image
 	#mask = cv2.bitwise_or(mask_white,mask_yellow)
 Then a bitwise AND with the grayscale image
 	#output = cv2.bitwise_and(gray,gray,mask=mask)
 
-[!alt text][image14] [!alt text][image15]
+![alt text][image14] ![alt text][image15]
 
 ##Step 3 - Canny Edge Detection
 
@@ -81,7 +81,7 @@ The Canny edge detection is done by first passing the output of the previous ste
 I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the blurred image with those values.
 	# edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 #Here are a couple examples for the result:
-[!alt text][image1] [!alt text][image2]
+![alt text][image1] ![alt text][image2]
 
 ##Step 4 - region of interest
 
@@ -193,9 +193,9 @@ def draw_lane_lines(image, lines, color=[255, 0, 0], thickness=20):
 
 The results are these images:
 
-[!alt text][image8] [!alt text][image9]
-[!alt text][image10] [!alt text][image11]
-[!alt text][image12] [!alt text][image13]
+![alt text][image8] ![alt text][image9]
+![alt text][image10] ![alt text][image11]
+![alt text][image12] ![alt text][image13]
 
 The pipeline can also be run on videos which can be viewed in the 'VideosOutput' directory.
 
