@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image6]: ./Images/HSLMask/mask_white_solidWhiteCurve.jpg "HSL2"
 
 [image7]: ./Images/HSLMask/mask_yellow_solidYellowCurve.jpg "HSL3"
-[image8]: ./Images/HSLMask/mask_yellow_solidWhiteCurve.jpg "HSL4"
+[image8]: ./Images/HSLMask/mask_yellow_solidYellowCurve2.jpg "HSL4"
 
 [image16]: ./Images/FinalResult/solidYellowCurve.jpg "Result1"
 [image9]: ./Images/FinalResult/solidWhiteCurve.jpg "Result2"
