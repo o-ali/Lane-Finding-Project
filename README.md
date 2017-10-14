@@ -86,7 +86,7 @@ I set the low threshold to 50 and the high to 150 and call the cv2.Canny on the 
 
 ![alt text][image1] ![alt text][image2]
 
-**Step 4 - region of interest
+## Step 4 - region of interest
 
 Next in the pipeline is creating the region of interest and masking out the rest of the image.
 rows and cols are set to the shape sizes of the 'edges' image (result of the Canny function). The rest of the variables are set by being a percent of the
